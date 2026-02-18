@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>BlueLink VoIP Solutions</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #0f172a;
+      --secondary: #2563eb;
+      --accent: #38bdf8;
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --text: #1f2937;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      padding: 70px 20px;
+      text-align: center;
+    }
+
+    header h1 { font-size: 2.6rem; margin-bottom: 10px; }
+    header p { font-size: 1.1rem; opacity: 0.95; }
+
+    nav {
+      background-color: var(--primary);
+      padding: 15px;
+      position: sticky;
+      top: 0;
+      text-align: center;
+      z-index: 100;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover { color: var(--accent); }
+
+    main {
+      max-width: 1100px;
+      margin: auto;
+      padding: 50px 20px;
+    }
+
+    section { margin-bottom: 40px; }
+
+    .card {
+      background-color: var(--card);
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
+
+    h2 { color: var(--secondary); margin-bottom: 15px; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .badge {
+      display: inline-block;
+      background-color: #e0f2fe;
+      color: #075985;
+      padding: 7px 14px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      margin: 6px 6px 0 0;
+    }
+
+    footer {
+      background-color: var(--primary);
+      color: #cbd5f5;
+      text-align: center;
+      padding: 25px 15px;
+      margin-top: 40px;
+      font-size: 0.9rem;
+    }
+
+    footer span { color: var(--accent); }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px;
+      border: 2px solid #e2e8f0;
+      border-radius: 8px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 1rem;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--secondary);
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .submit-btn {
+      background-color: var(--secondary);
+      color: white;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .submit-btn:hover {
+      background-color: #1d4ed8;
+    }
+
+    .submit-btn:disabled {
+      background-color: #cbd5e1;
+      cursor: not-allowed;
+    }
+
+    .form-message {
+      margin-top: 15px;
+      padding: 12px;
+      border-radius: 8px;
+      display: none;
+    }
+
+    .form-message.success {
+      background-color: #dcfce7;
+      color: #166534;
+      border: 1px solid #86efac;
+    }
+
+    .form-message.error {
+      background-color: #fee2e2;
+      color: #991b1b;
+      border: 1px solid #fca5a5;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>BlueLink VoIP Solutions</h1>
+    <p>Solutions de téléphonie IP et d'infrastructures réseau pour entreprises modernes</p>
+    <p style="margin-top:16px;"><a class="submit-btn" href="#contact">Contacter Jessika</a></p>
+  </header>
+
+    <nav>
+    <a href="#presentation">Entreprise</a>
+    <a href="#voip">VoIP</a>
+    <a href="#infrastructure">Infrastructure</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <main>
+
+    <section id="presentation" class="card">
+      <h2>Présentation de l'entreprise</h2>
+      <p>
+        BlueLink VoIP Solutions est une entreprise spécialisée dans la mise en place
+        de solutions de téléphonie IP et d'infrastructures réseau sécurisées.
+        Nous accompagnons les entreprises dans la modernisation de leurs systèmes
+        de communication.
+      </p>
+    </section>
+
+    <section id="voip" class="card">
+      <h2>Solution VoIP</h2>
+      <p>
+        Notre solution VoIP permet de centraliser les communications téléphoniques
+        via le réseau IP, réduisant les coûts tout en améliorant la qualité et la
+        flexibilité des échanges.
+      </p>
+      <div>
+        <span class="badge">IPBX</span>
+        <span class="badge">Téléphones IP</span>
+        <span class="badge">VLAN Voix</span>
+        <span class="badge">QoS</span>
+        <span class="badge">SIP</span>
+      </div>
+    </section>
+
+    <section id="infrastructure" class="card">
+      <h2>Infrastructure réseau</h2>
+      <p>
+        Nos infrastructures sont conçues pour garantir disponibilité, sécurité
+        et performance des services VoIP et données.
+      </p>
+      <div class="grid">
+        <div>
+          <span class="badge">Routeurs</span>
+          <span class="badge">Switchs L2/L3</span>
+          <span class="badge">VLAN</span>
+        </div>
+        <div>
+          <span class="badge">Firewall</span>
+          <span class="badge">pfSense</span>
+          <span class="badge">NAT</span>
+        </div>
+        <div>
+          <span class="badge">Serveurs VoIP</span>
+          <span class="badge">DHCP</span>
+          <span class="badge">DNS</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="card">
+      <h2>Nos services</h2>
+      <ul>
+        <li>Déploiement de solutions VoIP</li>
+        <li>Conception de topologies réseau d'entreprise</li>
+        <li>Sécurisation des communications</li>
+        <li>Maintenance et supervision réseau</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="card">
+      <h2>Contact</h2>
+      <p>Email : <strong>jessika@ipnetuniversity.net</strong></p>
+      <p>Téléphone : +228 70 07 17 09</p>
+      <p>Localisation : Lomé, Togo</p>
+
+      <form id="contact-form" style="margin-top:20px;">
+        <div class="form-group">
+          <label for="name">Nom</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Votre email</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="form-group">
+          <label for="subject">Objet</label>
+          <input type="text" id="subject" name="subject" />
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Envoyer</button>
+
+        <div id="form-message" class="form-message"></div>
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 <span>BlueLink VoIP Solutions</span> — Téléphonie IP & Réseaux</p>
+  </footer>
+  </body>
+
+  <script>
+  (function(){
+    const form = document.getElementById('contact-form');
+    const msgBox = document.getElementById('form-message');
+    if(!form) return;
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      const nameValue = document.getElementById('name').value.trim();
+      const emailValue = document.getElementById('email').value.trim();
+      const subjectValue = document.getElementById('subject').value.trim() || 'Contact depuis le site';
+      const messageValue = document.getElementById('message').value.trim();
+
+      if(!nameValue || !emailValue || !messageValue){
+        msgBox.textContent = 'Veuillez remplir tous les champs requis.';
+        msgBox.className = 'form-message error';
+        msgBox.style.display = 'block';
+        return;
+      }
+
+      const bodyText = `Nom: ${nameValue}\nEmail: ${emailValue}\n\n${messageValue}`;
+      const mailto = `mailto:jessika@ipnetuniversity.net?subject=${encodeURIComponent(subjectValue)}&body=${encodeURIComponent(bodyText)}`;
+
+      msgBox.textContent = 'Ouverture de votre client mail...';
+      msgBox.className = 'form-message success';
+      msgBox.style.display = 'block';
+
+      // Open mail client
+      window.location.href = mailto;
+    });
+  })();
+  </script>
+
+</body>
+</html>
