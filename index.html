@@ -256,26 +256,16 @@
       <p>Téléphone : +228 70 07 17 09</p>
       <p>Localisation : Lomé, Togo</p>
 
-      <form id="contact-form" style="margin-top:20px;">
+      <form id="contact-form" action="https://formspree.io/f/xaqddygo" method="POST" style="margin-top:20px;">
         <div class="form-group">
-          <label for="name">Nom</label>
-          <input type="text" id="name" name="name" required />
+          <label for="email">Votre email :</label>
+          <input type="email" name="email" id="email" required>
         </div>
         <div class="form-group">
-          <label for="email">Votre email</label>
-          <input type="email" id="email" name="email" required />
-        </div>
-        <div class="form-group">
-          <label for="subject">Objet</label>
-          <input type="text" id="subject" name="subject" />
-        </div>
-        <div class="form-group">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" required></textarea>
+          <label for="message">Votre message :</label>
+          <textarea name="message" id="message" required></textarea>
         </div>
         <button type="submit" class="submit-btn">Envoyer</button>
-
-        <div id="form-message" class="form-message"></div>
       </form>
     </section>
 
@@ -286,37 +276,7 @@
   </footer>
   </body>
 
-  <script>
-  (function(){
-    const form = document.getElementById('contact-form');
-    const msgBox = document.getElementById('form-message');
-    if(!form) return;
-    form.addEventListener('submit', function(e){
-      e.preventDefault();
-      const nameValue = document.getElementById('name').value.trim();
-      const emailValue = document.getElementById('email').value.trim();
-      const subjectValue = document.getElementById('subject').value.trim() || 'Contact depuis le site';
-      const messageValue = document.getElementById('message').value.trim();
 
-      if(!nameValue || !emailValue || !messageValue){
-        msgBox.textContent = 'Veuillez remplir tous les champs requis.';
-        msgBox.className = 'form-message error';
-        msgBox.style.display = 'block';
-        return;
-      }
-
-      const bodyText = `Nom: ${nameValue}\nEmail: ${emailValue}\n\n${messageValue}`;
-      const mailto = `mailto:jessika@ipnetuniversity.net?subject=${encodeURIComponent(subjectValue)}&body=${encodeURIComponent(bodyText)}`;
-
-      msgBox.textContent = 'Ouverture de votre client mail...';
-      msgBox.className = 'form-message success';
-      msgBox.style.display = 'block';
-
-      // Open mail client
-      window.location.href = mailto;
-    });
-  })();
-  </script>
 
 </body>
 </html>
